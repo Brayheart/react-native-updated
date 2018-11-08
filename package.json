@@ -9,11 +9,17 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "countryjs": "^1.8.0",
     "create-react-class": "^15.6.3",
     "expo": "^30.0.1",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
+    "react-native-country-picker-modal": "^0.6.2",
+    "react-native-device-info": "^0.24.3",
     "tcomb-form-native": "^0.6.20",
     "world-countries": "^2.0.0"
+  },
+  "devDependencies": {
+    "react-country-region-selector": "^1.4.1"
   }
 }

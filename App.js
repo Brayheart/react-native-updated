@@ -7,6 +7,9 @@ import {
   TouchableHighlight
 } from "react-native";
 import t from "tcomb-form-native";
+import countries from "world-countries";
+
+let parsed = countries.map(e => e.name.official);
 
 var Form = t.form.Form;
 
@@ -15,9 +18,10 @@ var Person = t.struct({
   name: t.String, // a required string
   surname: t.maybe(t.String), // an optional string
   age: t.Number, // a required number
-  Country: t.String,
+  Country: t.String, //a required country
   rememberMe: t.Boolean, // a boolean
 });
+
 
 var options = {}; // optional rendering options (see documentation)
 
@@ -44,7 +48,6 @@ class AwesomeProject extends React.Component {
         <Form ref="form" type={Person} options={options} />
         <TouchableHighlight
           style={styles.button}
-          onPress={this.onPress}
           underlayColor="#99d9f4"
         >
           <Text style={styles.buttonText}>Save</Text>
